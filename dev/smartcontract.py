@@ -324,8 +324,8 @@ class AuthenticateSmartContract:
         if public_key_role is None:
             #print("NO SUCH PUBLIC KEY")
             self.client_comunication(transaction['sender_public_key'],transaction['case_number'],'You are not authurized')
-            self.storage_comunication(transaction,block_number)
             transaction['SC_Authenticate_output']='Denied Access'
+            self.storage_comunication(transaction,block_number)
             result='Denied Access'
             return  result
         
